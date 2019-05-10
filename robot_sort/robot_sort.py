@@ -99,41 +99,41 @@ class SortingRobot:
 
         # I am a robot beep-boop
         while not self.light_is_on():
-            print(f"The light is off")
+            #print(f"The light is off")
             self.set_light_on() # Turn light on so I can see
-            print(f"I turned the light on: {self._list}")
+            #print(f"I turned the light on: {self._list}")
             while self.can_move_right(): # While I'm not at the very end
-                print(f"I can move right")
+                #print(f"I can move right")
                 self.swap_item() # Pick up first item
                 self.move_right() # Move to the right
-                print(f"I picked up {self._item} and moved right: {self._list}")
+                #print(f"I picked up {self._item} and moved right: {self._list}")
                 if self.compare_item() > 0: # Compare my thing with thing in front of me
-                    print(f"My {self._item} is bigger")# If my thing is bigger
+                    #print(f"My {self._item} is bigger")# If my thing is bigger
                     self.swap_item() # swap em
-                    print(f"I swapped it for {self._item}: {self._list}")
+                    #print(f"I swapped it for {self._item}: {self._list}")
                     self.move_left() # go back to the empty spot now
-                    print(f"I moved left")
+                    #print(f"I moved left")
                     self.swap_item() # swap the smaller thing for bigger thing
-                    print(f"I put it down and now I have {self._item}: {self._list}")
+                    #print(f"I put it down and now I have {self._item}: {self._list}")
                     self.move_right() # go to the right again
-                    print(f"I moved right")
+                    #print(f"I moved right")
                     self.set_light_off() # repeat this whole thing
-                    print(f"I turned the light off (a swap occured)")
+                    #print(f"I turned the light off (a swap occured)")
                 else: # If my thing is not bigger
-                    print(f"My {self._item} is smaller")
+                    #print(f"My {self._item} is smaller")
                     self.move_left()
-                    print(f"I moved left")
+                    #print(f"I moved left")
                     self.swap_item() # move left and swap it back
-                    print(f"I swapped it for {self._item}: {self._list}")
+                    #print(f"I swapped it for {self._item}: {self._list}")
                     self.move_right() # move to the right again
-                    print(f"I moved right")
-                    print(f"Is the light on? {self.light_is_on()}")
+                    #print(f"I moved right")
+                    #print(f"Is the light on? {self.light_is_on()}")
             if not self.light_is_on(): # should fall here when no longer able to move right and light has been turned off
-                print(f"The light is off\nI can't move right anymore")
+                #print(f"The light is off\nI can't move right anymore")
                 while self.can_move_left(): 
                     self.move_left() # and move all the way to the beginning again
-                    print(f"I moved left")
-                    print(f"Is the light on? {self.light_is_on()}")
+                    #print(f"I moved left")
+                    #print(f"Is the light on? {self.light_is_on()}")
         pass
 
 robotTest = SortingRobot([3, 2, 1])
