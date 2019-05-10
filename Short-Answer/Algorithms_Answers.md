@@ -27,3 +27,10 @@ b) O(n^4) - Quadratic Time
 
 c) O(n) - Linear Time
     It's going to recursively call itself for the amount of bunnies input, until there are 0.
+
+*Exercise II*
+Binary search time. Drop first egg from halfway up. If it breaks, drop second egg from remaining floors one-by-one until we find the floor it breaks on. Worst case scenario, this involves dropping the egg half of n, minus the one we already dropped it from.
+
+If it doesn't break, all the floors below are safe, and we go halfway up again. I suppose you could probably use a recursive approach here, since we'd be repeating the steps in the first paragraph until the floor is found.
+
+Binary search is O(log n).
