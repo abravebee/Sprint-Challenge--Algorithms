@@ -96,28 +96,30 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
+
         # I am a robot beep-boop
-        # Turn light on so I can see
-        # Pick up first item
-        # Move to the right
-        # Compare my thing with thing in front of me
-        # If my thing is bigger
-        # swap em
-        # go back to the empty spot now
-        # swap the smaller thing for bigger thing
-        # go to the right again
-        # repeat this whole thing
-
-        # If my thing is not bigger
-        # move left and swap it back
-        # move to the right again
-        # pick the thing up and repeat comparison loop
-
-        # until I get to the end
-        # and move all the way to the beginning again
-        # this is like that one sort where it needs to double check everything I think
-        # so move to beginning and check again
-        # use light as means of starting/stopping
+        while not self.light_is_on():
+            self.set_light_on() # Turn light on so I can see
+            while self.can_move_right(): # While I'm not at the very end
+                self.swap_item() # Pick up first item
+                self.move_right() # Move to the right
+                if self.compare_item() > 0: # Compare my thing with thing in front of me
+                    # If my thing is bigger
+                    self.swap_item() # swap em
+                    self.move_left() # go back to the empty spot now
+                    self.swap_item() # swap the smaller thing for bigger thing
+                    self.move_right() # go to the right again
+                    # repeat this whole thing
+                else: # If my thing is not bigger
+                    self.move_left()
+                    self.swap_item() # move left and swap it back
+                    self.move_right() # move to the right again
+            # pick the thing up and repeat comparison loop
+            # until I get to the end
+            # and move all the way to the beginning again
+            # this is like that one sort where it needs to double check everything I think
+            # so move to beginning and check again
+            # use light as means of starting/stopping
 
         pass
 
