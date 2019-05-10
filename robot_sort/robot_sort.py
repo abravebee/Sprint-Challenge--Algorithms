@@ -96,7 +96,29 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
+        # I am a robot beep-boop
+        # Turn light on so I can see
+        # Pick up first item
+        # Move to the right
+        # Compare my thing with thing in front of me
+        # If my thing is bigger
+        # swap em
+        # go back to the empty spot now
+        # swap the smaller thing for bigger thing
+        # go to the right again
+        # repeat this whole thing
+
+        # If my thing is not bigger
+        # move left and swap it back
+        # move to the right again
+        # pick the thing up and repeat comparison loop
+
+        # until I get to the end
+        # and move all the way to the beginning again
+        # this is like that one sort where it needs to double check everything I think
+        # so move to beginning and check again
+        # use light as means of starting/stopping
+
         pass
 
 
